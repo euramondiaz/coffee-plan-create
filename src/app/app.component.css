@@ -1,0 +1,16 @@
+.nav-bar{
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+}
+
+.container{
+  padding-top: 90px;
+}
+
+@media(min-width:768px){
+
+  .container{
+    padding-top: 110px;
+  }
+}
