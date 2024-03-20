@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'cafeteriaplan'`, () => {
+  it(`should have as title 'coffeeroasters-subscription-site'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('cafeteriaplan');
+    expect(app.title).toEqual('coffeeroasters-subscription-site');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('cafeteriaplan app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('coffeeroasters-subscription-site app is running!');
   });
 });
