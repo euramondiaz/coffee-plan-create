@@ -1,0 +1,173 @@
+.steps{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  margin-top: 7rem;
+  padding: 5rem 0;
+  background-color: var(--dark-grey-blue);
+  border-radius: 12px;
+  transition: .3s;
+}
+
+.steps .draw{
+  display: none;
+}
+
+.steps .steps_list{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+.steps .steps_list .step{
+  width: 327px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+  transition: .3s;
+}
+
+.steps .steps_list .step .step_number{
+  font-size: 4.5rem;
+  font-family: var(--fraunces);
+  font-weight: 900;
+  line-height: 72px;
+  color: var(--pale-orange);
+  transition: .3s;
+}
+
+.steps .steps_list .step .step_name{
+  font-size: 1.75rem;
+  font-family: var(--fraunces);
+  font-weight: 900;
+  line-height: 32px;
+  color: var(--light-cream);
+  transition: .3s;
+}
+
+.steps .steps_list .step .step_description{
+  font-size: .9375rem;
+  font-family: var(--barlow);
+  font-weight: 400;
+  line-height: 25px;
+  color: var(--light-cream-descriptions);
+  transition: .3s;
+}
+
+@media(min-width: 768px){
+
+  .steps{
+    width: 768px;
+    align-items: flex-start;
+    gap: 4rem;
+    padding: 5rem 2rem;
+    margin-top: 10rem;
+  }
+
+  .steps .draw{
+    width: 497px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .steps .draw .circle{
+    width: 31px;
+    height: 31px;
+    border: 2px solid var(--dark-cyan);
+    border-radius: 100%;
+    z-index: 1;
+  }
+
+  .steps .draw .line{
+    width: 467px;
+    height: 2px;
+    position: absolute;
+    left: calc(31px/2);
+    background-color: var(--pale-orange);
+  }
+
+  .steps .steps_list{
+    width: 689px;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0rem;
+    justify-content: space-between;
+  }
+
+  .steps .steps_list .step{
+    width: 223px;
+    gap: 2rem;
+    align-items: flex-start;
+    text-align: start;
+  }
+}
+
+@media(min-width: 1200px){
+
+  .steps{
+    width: 1100px;
+    padding: 7rem 4rem;
+  }
+
+  .steps .draw{
+    width: 684px;
+  }
+
+  .steps .draw .line{
+    width: 653px;
+  }
+
+  .steps .steps_list{
+    width: 898px;
+  }
+
+  .steps .steps_list .step{
+    width: 245px;
+  }
+
+  .steps .steps_list .step .step_name{
+    font-size: 2rem;
+    line-height: 36px;
+  }
+
+  .steps .steps_list .step .step_name{
+    font-size: 2rem;
+  }
+
+  .steps .steps_list .step .step_description{
+    font-size: 1rem;
+  }
+}
+
+@media(min-width: 1440px){
+
+  .steps{
+    width: 1280px;
+    padding: 7rem 4rem;
+  }
+
+  .steps .draw{
+    width: 791px;
+  }
+
+  .steps .draw .line{
+    width: 760px;
+  }
+
+  .steps .steps_list{
+    width: 1045px;
+  }
+
+  .steps .steps_list .step{
+    width: 285px;
+  }
+}
+
+
