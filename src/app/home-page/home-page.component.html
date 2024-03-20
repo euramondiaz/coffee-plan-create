@@ -1,1 +1,96 @@
-<p>home-page works!</p>
+<main class="main">
+  <section class="main_img">
+    <div class="img_container">
+      <picture class="picture">
+        <source media="(max-width: 767px)" srcset="../../../assets/home/mobile/image-hero-coffeepress.jpg">
+        <source media="(max-width: 1199px)" srcset="../../../assets/home/tablet/image-hero-coffeepress.jpg">
+        <source media="(min-width: 1200px)" srcset="../../../assets/home/desktop/image-hero-coffeepress.jpg">
+        <img src="../../../assets/home/mobile/image-hero-coffeepress.jpg" class="image" alt="Great coffee made simple">
+      </picture>
+    </div>
+    <article class="main_img_content">
+      <h1 class="main_img_content-title">
+        Café excelente feito de forma simples.
+      </h1>
+      <p class="main_img_content-description">
+        "Inicie suas manhãs com os mais requintados cafés da região.
+        Desfrute dos nossos artesanais cafés cuidadosamente selecionados das melhores torrefadoras,
+        entregues diretamente à sua porta, de acordo com a sua programação."
+      </p>
+      <button class="main_img_content-button" [routerLink]="['/plan']">
+        Crie seu plano
+      </button>
+    </article>
+  </section>
+
+  <section class="collection">
+    <h2 class="collection_section_title">
+      Nossa coleção
+    </h2>
+    <ul class="items_list">
+      <li class="item" *ngFor="let item of collectionItems">
+        <img [src]="item.itemImg" alt="Item image" class="item_img">
+        <article class="item_Info">
+          <h3 class="item_name">
+            {{item.itemName}}
+          </h3>
+          <p class="item_description">
+            {{item.itemDescription}}
+          </p>
+        </article>
+      </li>
+    </ul>
+  </section>
+
+  <section class="chooseUs">
+    <article class="why_text">
+      <h2 class="section_title">
+        Por que nos escolher?
+      </h2>
+      <p class="section_description">
+        Uma parte fundamental do nosso trabalho é selecionar cuidadosamente quais cafés
+         específicos serão incluídos em nossa coleção. Isso envolve uma colaboração próxima
+          com os produtores de café de alta qualidade para garantir que possamos oferecer a
+           você uma experiência verdadeiramente excepcional em todos os aspectos.
+      </p>
+    </article>
+    <ul class="benefits_list">
+      <li class="benefit" *ngFor="let benefit of benefits">
+        <img class="benefit_icon" [src]="benefit.iconSrc" [alt]="benefit.alt">
+        <article class="benefit_info">
+          <h3 class="benefit_name">{{benefit.benefitName}}</h3>
+          <p class="benefit_description">{{benefit.description}}</p>
+        </article>
+      </li>
+    </ul>
+  </section>
+
+  <section class="howItWorks">
+    <h2 class="howItWorks_section_title">
+      Como funciona
+    </h2>
+    <div class="draw">
+      <div class="circle"></div>
+      <div class="line"></div>
+      <div class="circle"></div>
+      <div class="line"></div>
+      <div class="circle"></div>
+    </div>
+    <ul class="workSteps_list">
+      <li class="workStep" *ngFor="let step of workSteps">
+        <span class="workStep_number">
+          {{step.number}}
+        </span>
+        <h3 class="workStep_name">
+          {{step.stepName}}
+        </h3>
+        <p class="workStep_description">
+          {{step.stepDescription}}
+        </p>
+      </li>
+    </ul>
+    <button class="createYourPlan_button" [routerLink]="['/plan']">
+      Crie seu plano
+    </button>
+  </section>
+</main>
