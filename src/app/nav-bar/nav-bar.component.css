@@ -1,0 +1,144 @@
+.header{
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 1.5rem;
+  background-color: var(--light-cream);
+}
+
+.header .logo{
+  width: 163px;
+  height: 18px;
+  cursor: pointer;
+  transition: .4s;
+}
+
+.header nav{
+  width: 100%;
+}
+
+.header nav .links{
+  width: 100%;
+  height: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
+  background: linear-gradient(var(--light-cream) 55%, transparent);
+  overflow: hidden;
+  transition: .4s;
+}
+
+.header.opened nav .links{
+  visibility: visible;
+  height: 100vh;
+}
+
+.header nav .links .link{
+  font-size: 1.5rem;
+  font-weight: 900;
+  font-family: var(--fraunces);
+  line-height: 32px;
+  color: var(--dark-grey-blue);
+  opacity: 0;
+  cursor: pointer;
+  transition: .4s;
+}
+
+.header nav .links .link:first-child{
+  padding-top: 3rem;
+}
+
+.header.opened nav .links .link{
+  opacity: 1;
+}
+
+.header .hamburger,
+.header .close_menu{
+  width: 16px;
+  height: 15px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.header .close_menu{
+  display: none;
+}
+
+.header.opened .hamburger{
+  display: none;
+}
+
+.header.opened .close_menu{
+  display: block;
+}
+
+@media(min-width: 768px){
+
+  .header{
+    padding: 2.5rem;
+  }
+
+  .header .logo{
+    width: 236px;
+    height: 26px;
+  }
+
+  .header .hamburger,
+  .header .close_menu{
+    display: none;
+  }
+
+  .header nav{
+    width: auto;
+  }
+
+  .header nav .links{
+    height: auto;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1.8rem;
+    position: static;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .header nav .links .link{
+    font-size: .75rem;
+    font-weight: 700;
+    font-family: var(--barlow);
+    line-height: 15px;
+    letter-spacing: .92px;
+    text-transform: uppercase;
+    color: var(--grey);
+    opacity: 1;
+    transition: .2s;
+  }
+
+  .header nav .links .link:first-child{
+    padding-top: 0;
+  }
+
+  .header nav .links .link:hover{
+    color: var(--dark-grey-blue);
+  }
+
+}
+
+@media(min-width: 1440px){
+  .header{
+    padding: 2.5rem 5.5rem;
+  }
+}
