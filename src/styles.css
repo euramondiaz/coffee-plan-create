@@ -1,1 +1,35 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+html, body{
+  height: 100vh;
+  background-color: var(--light-cream);
+}
+
+:root{
+  --dark-cyan: hsl(179, 81%, 29%);
+  --main-button-hover: #66D2CF;
+  --main-button-disabled: #E2DEDB;
+  --dark-grey-blue: hsl(215, 19%, 25%);
+  --pale-orange: hsl(25, 94%, 86%);
+  --light-cream: hsl(43, 78%, 98%);
+  --light-cream-descriptions: hsl(43, 78%, 98%, 80%);
+  --grey: hsl(215, 5%, 54%);
+  --big-selection-option: #F4F1EB;
+  --fraunces: 'Fraunces', serif;
+  --barlow: 'Barlow', sans-serif;
+  --index-name-color: hsl(216, 10%, 69%);
+  --index-number-color: hsl(219, 14%, 77%);
+  --disabled-index-name: hsl(222, 28%, 88%);
+  --disabled-index-number: hsl(220, 26%, 87%);
+}
+
+p,h1,h2,h3,h4,h5,h6{
+  margin: 0;
+  padding: 0;
+}
