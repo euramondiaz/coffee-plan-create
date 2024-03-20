@@ -1,1 +1,92 @@
-<p>about works!</p>
+<main class="main">
+  <section class="aboutUs">
+    <div class="img_container">
+      <picture class="picture">
+        <source media="(max-width: 767px)" srcset="../../../assets/about/mobile/image-hero-whitecup.jpg">
+        <source media="(max-width: 1199px)" srcset="../../../assets/about/tablet/image-hero-whitecup.jpg">
+        <source media="(min-width: 1200px)" srcset="../../../assets/about/desktop/image-hero-whitecup.jpg">
+        <img src="../../../assets/about/mobile/image-hero-whitecup.jpg" class="image" alt="About us">
+      </picture>
+    </div>
+    <article class="aboutUs_info">
+      <h1 class="aboutUs_title">
+        Sobre nós
+      </h1>
+      <p class="aboutUs_description">
+        Em 2000, a Jornada de nossos Torrefadores de Café começou,
+        explorando as narrativas exóticas por trás do café em todo o mundo.
+         Desde então, nossa paixão é trazer a xícara perfeita -
+         desde a seleção dos grãos até o momento de preparar cada remessa que enviamos.
+      </p>
+    </article>
+  </section>
+
+  <section class="commitment">
+    <div class="commitment_img_container">
+      <picture class="picture">
+        <source media="(max-width: 767px)" srcset="../../../assets/about/mobile/image-commitment.jpg">
+        <source media="(max-width: 1199px)" srcset="../../../assets/about/tablet/image-commitment.jpg">
+        <source media="(min-width: 1200px)" srcset="../../../assets/about/desktop/image-commitment.jpg">
+        <img src="../../../assets/about/mobile/image-commitment.jpg" alt="" class="commitment_img">
+      </picture>
+    </div>
+    <article class="commitment_info">
+      <h2 class="commitment_title">
+        Nosso compromisso
+      </h2>
+      <p class="commitment_description">
+        "Nosso fundamento é uma missão simples: fazer o bem enquanto buscamos o extraordinário.
+         Nosso objetivo é facilitar a descoberta e a preparação do melhor café do mundo em sua
+         própria casa. Tudo começa na origem. Para encontrar os lotes específicos que desejamos adquirir,
+          dedicamos cerca de 60 dias por ano viajando para compreender os desafios e as oportunidades
+          em cada local. Estabelecemos parcerias com cafeicultores excepcionais e capacitamos uma
+          comunidade global de agricultores, promovendo valores que transcendem o conceito de comércio
+          justo. Além disso, oferecemos treinamento, apoiamos iniciativas comunitárias agrícolas e
+          investimos em pesquisas sobre a planta do café. Ao selecionar apenas as melhores misturas,
+          torramos cada lote para realçar os distintos perfis de degustação de suas regiões nativas de
+          cultivo."
+      </p>
+    </article>
+  </section>
+
+  <section class="quality">
+    <div class="quality_img_container">
+      <picture class="picture">
+        <source media="(max-width: 767px)" srcset="../../../assets/about/mobile/image-quality.jpg">
+        <source media="(max-width: 1199px)" srcset="../../../assets/about/tablet/image-quality.jpg">
+        <source media="(min-width: 1200px)" srcset="../../../assets/about/desktop/image-quality.jpg">
+        <img src="../../../assets/about/mobile/image-quality.jpg" alt="" class="quality_img">
+      </picture>
+    </div>
+    <article class="quality_info">
+      <h2 class="quality_title">
+        Qualidade
+      </h2>
+      <p class="quality_description">
+        "Embora nossos parceiros produtores dediquem cuidado meticuloso a todas as fases da colheita
+         e do processamento, implementamos um rigoroso programa de controle de qualidade para evitar
+          a torra excessiva ou o café excessivamente seco. Cada saco de café é cuidadosamente etiquetado
+           com a data de torra e o número do lote. Nosso objetivo é proporcionar uma torra consistente
+           e de fácil manuseio, garantindo que a preparação seja simples e prazerosa."
+      </p>
+    </article>
+  </section>
+
+  <section class="headquarters">
+    <h2 class="headquarters_title">
+      Nossas sedes
+    </h2>
+    <ul class="headquarters_list">
+      <li class="headquarter" *ngFor="let headquarter of headquarters">
+        <img [src]="headquarter.img" alt="" class="headquarter_img">
+        <article class="headquarter_texts">
+          <h3 class="headquarter_location">
+            {{headquarter.location}}
+          </h3>
+          <p class="headquarter_info" [innerHTML]="headquarter.info">
+          </p>
+        </article>
+      </li>
+    </ul>
+  </section>
+</main>
