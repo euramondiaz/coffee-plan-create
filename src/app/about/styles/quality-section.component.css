@@ -1,0 +1,129 @@
+.quality{
+  width: 327px;
+  height: 509px;
+  position: relative;
+  margin-top: 12rem;
+  border-radius: 12px;
+  background-color: var(--dark-grey-blue);
+  transition: .3s;
+}
+
+.quality_img_container,
+.quality_img_container .picture{
+  width: 279px;
+  height: 156px;
+  position: absolute;
+  top: -12%;
+  left: 50%;
+  translate: -50%;
+  transition: .3s;
+}
+
+.quality_img_container .picture .quality_img{
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+.quality_info{
+  width: 279px;
+  position: absolute;
+  top: 27%;
+  left: 50%;
+  translate: -50%;
+  text-align: center;
+}
+
+.quality_info .quality_title{
+  font-size: 1.75rem;
+  font-family: var(--fraunces);
+  font-weight: 900;
+  line-height: 28px;
+  color: var(--light-cream);
+  margin-bottom: 1.5rem;
+}
+
+.quality_info .quality_description{
+  font-size: .9375rem;
+  font-family: var(--barlow);
+  font-weight: 400;
+  line-height: 25px;
+  color: var(--light-cream-descriptions);
+}
+
+@media(min-width: 768px){
+
+  .quality{
+    width: 688px;
+    height: 488px;
+    margin-top: 19rem;
+  }
+
+  .quality_img_container,
+  .quality_img_container .picture{
+    width: 573px;
+    height: 320px;
+    top: -20%;
+  }
+
+  .quality_info{
+    width: 540px;
+    top: 46%;
+  }
+
+  .quality_info .quality_title{
+    font-size: 2rem;
+    line-height: 48px;
+  }
+}
+
+@media(min-width: 1200px){
+
+  .quality{
+    width: 1100px;
+    height: 407px;
+    margin-top: 13rem;
+  }
+
+  .quality_img_container,
+  .quality_img_container .picture{
+    width: 350px;
+    height: 372px;
+    top: -8%;
+    left: initial;
+    translate: initial;
+    right: 5%;
+  }
+
+  .quality_info{
+    top: 20%;
+    left: 5%;
+    translate: initial;
+    text-align: start;
+  }
+
+  .quality_info .quality_description{
+    font-size: 1rem;
+    line-height: 26px;
+  }
+}
+
+@media(min-width: 1440px){
+
+  .quality{
+    width: 1280px;
+    height: 474px;
+  }
+
+  .quality_img_container,
+  .quality_img_container .picture{
+    width: 445px;
+    height: 474px;
+    right: 4%;
+  }
+
+  .quality_info{
+    top: 18%;
+    left: 7%;
+  }
+}
