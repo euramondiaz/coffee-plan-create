@@ -1,1 +1,134 @@
-<p>plan works!</p>
+<main class="main">
+  <section class="main_img">
+    <div class="img_container">
+      <picture class="picture">
+        <source media="(max-width: 767px)" srcset="../../../assets/plan/mobile/image-hero-blackcup.jpg">
+        <source media="(max-width: 1199px)" srcset="../../../assets/plan/tablet/image-hero-blackcup.jpg">
+        <source media="(min-width: 1200px)" srcset="../../../assets/plan/desktop/image-hero-blackcup.jpg">
+        <img src="../../../assets/plan/mobile/image-hero-blackcup.jpg" class="image" alt="Create a plan">
+      </picture>
+    </div>
+    <article class="main_img_content">
+      <h1 class="main_img_content-title">
+        Crie seu plano
+      </h1>
+      <p class="main_img_content-description">
+        Personalize um plano de assinatura que atenda perfeitamente às suas necessidades.
+        Temos uma seleção variada dos melhores cafés artesanais de todo o mundo, entregues
+        frescos diretamente à sua porta.
+      </p>
+    </article>
+  </section>
+
+  <section class="steps">
+    <div class="draw">
+      <div class="line"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+    <ul class="steps_list">
+      <li class="step" *ngFor="let step of steps">
+        <span class="step_number">
+          {{step.number}}
+        </span>
+        <h3 class="step_name">
+          {{step.stepName}}
+        </h3>
+        <p class="step_description">
+          {{step.stepDescription}}
+        </p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="order_container">
+
+    <section class="order">
+      <ul class="index_list" #index_list>
+
+          <li class="index_item {{item.id}}" *ngFor="let item of indexList, let i = index" #indexItem>
+              <article class="item_info">
+                <p class="number">
+                  {{item.number}}
+                </p>
+                <h4 class="name">
+                  {{item.name}}
+                </h4>
+              </article>
+            <span class="border_bottom" *ngIf="i < indexList.length - 1"></span>
+          </li>
+
+      </ul>
+
+      <ul class="listOfOptions" #listOfOptions>
+        <li class="option" *ngFor="let option of options">
+          <div class="question_and_arrow_div" #openDropDownDiv (click)="openDropDown(openDropDownDiv)">
+            <h2 class="question">
+              {{option.question}}
+            </h2>
+            <svg class="arrow" width="19" height="13" xmlns="http://www.w3.org/2000/svg"><path d="M15.949.586l2.828 2.828-9.096 9.096L.586 3.414 3.414.586l6.267 6.267z" fill="#0E8784" fill-rule="nonzero"/></svg>
+          </div>
+          <ul class="inner_options_list">
+            <li class="inner_option" (click)="addActiveClass(li); selectOption(li, innerOption.optionName, index_list)" #li *ngFor="let innerOption of option.innerOptions" id="{{option.id}}">
+              <h3 class="inner_option_name">
+                {{innerOption.optionName}}
+              </h3>
+              <p class="inner_option_description">
+                {{innerOption.optionDescription}}
+              </p>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section class="order_summary">
+      <article class="order_summary_info">
+        <h3 class="order_summary_title">
+          RESUMO DO PEDIDO
+        </h3>
+        <p class="order_summary_text" *ngIf="howYouDrinkYourCoffee !== 'Capsule'">
+          "Tomo café<span>{{howYouDrinkYourCoffeeText()}}</span>, de <span>{{typeOfCoffeeText()}}</span> Com a quantia de <span>{{howMuchText()}}</span> e <span>{{grindText()}}</span>, envie pra mim <span>{{howOftenText()}}</span>.”
+        </p>
+
+
+      </article>
+      <button class="order_button" [disabled]="!validPlan" [ngClass]="{'disabledButton': !validPlan}" (click)="createPlan()">Criar meu plano!</button>
+    </section>
+
+  </section>
+</main>
+
+<dialog class="modal" #modal>
+  <button class="close_modal" (click)="closeModal()">
+    <svg width="14" height="13" xmlns="http://www.w3.org/2000/svg"><path d="M12.657.843a1.5 1.5 0 010 2.121L9.12 6.5l3.536 3.536a1.5 1.5 0 11-2.121 2.12L7 8.622l-3.536 3.536a1.5 1.5 0 11-2.12-2.121L4.877 6.5 1.343 2.964A1.5 1.5 0 113.464.844L7 4.377 10.536.843a1.5 1.5 0 012.12 0z" fill="#FFFFFF" fill-rule="evenodd"/></svg>
+  </button>
+  <div class="modal_title_div">
+    <h3 class="modal_title">Order Summary</h3>
+  </div>
+  <article class="summary_text">
+    <p class="summary" *ngIf="howYouDrinkYourCoffee !== 'Capsule'">
+      “Tomo café <span>{{howYouDrinkYourCoffee}}</span>, de <span>{{typeOfCoffee }}</span> Com a quantia de <span>{{howMuch}}</span> e <span>{{grind}}</span>, envie pra mim  <span>{{howOften}}</span>.”
+    </p>
+    <p class="summary" *ngIf="howYouDrinkYourCoffee === 'Capsule'">
+      “I drink my coffee using <span>{{howYouDrinkYourCoffee}}</span>, with a <span>{{typeOfCoffee}}</span> type of bean. <span>{{howMuch}}</span>,
+      sent to me <span>{{howOften}}</span>.”
+    </p>
+    <p class="confimation_text">
+      Isso está correto? Você pode prosseguir para a finalização da compra ou voltar para a seleção do plano se algo
+      está errado. Os códigos de desconto de assinatura também podem ser resgatados na finalização da compra.
+    </p>
+  </article>
+  <div class="price_div">
+    <p class="price">
+      $14.00/mês
+    </p>
+    <button class="checkout_button_mobile">
+      Checkout - $14.00/mês
+    </button>
+    <button class="checkout_button">
+      Comprar
+    </button>
+  </div>
+</dialog>
