@@ -1,28 +1,84 @@
-# Cafeteriaplan
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.12.
 
-## Development server
+# Personalização de pedidos de café 
+desafio front end mentor
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+![preview img](src/assets/mockupprevia.png)
 
-## Code scaffolding
+Este repositório contém o código-fonte do projeto Coffeeroasters, um desafio proposto pelo site Frontend Mentor. Este README.md fornece uma visão geral completa do projeto, incluindo informações sobre sua finalidade, estrutura do projeto, tecnologias utilizadas, instruções de instalação, uso, contribuição e muito mais.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Sumário
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- [1. Visão Geral](#1-visão-geral)
+- [2. Objetivos Principais](#2-objetivos-principais)
+- [4. Instalação](#4-instalação)
+- [5. Uso](#5-uso)
+- [6. Contribuição](#6-contribuição)
+- [7. Licença](#7-licença)
 
-## Running unit tests
+# 1. Visão Geral
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+O projeto Coffeeroasters é um desafio proposto pelo site Frontend Mentor, que consiste na implementação de um site para uma empresa fictícia de café chamada Coffeeroasters. O desafio inclui a criação de diferentes páginas, como a página inicial, página de planos de assinatura personalizados e outras, além de funcionalidades interativas.
 
-## Running end-to-end tests
+## 2. Objetivos Principais
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- **Demonstrar Habilidades Técnicas:** O portfólio visa destacar as habilidades técnicas em desenvolvimento web front-end, incluindo HTML, CSS e JavaScript, bem como seu conhecimento em bibliotecas e frameworks populares, como Angular e TypeScript.
 
-## Further help
+- **Apresentar Projetos Relevantes:** Uma seção dedicada é reservada para exibir os projetos mais recentes e relevantes desenvolvidos por Ramon Dias. Cada projeto é acompanhado por uma breve descrição, capturas de tela e links para visualização ou repositório no GitHub.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-"# coffee-plan-create" 
+- **Facilitar o Contato:** O portfólio inclui informações de contato de Ramon Dias, como endereço de e-mail e perfis em redes sociais e plataformas profissionais, para facilitar o contato de potenciais clientes, recrutadores ou colaboradores.
+
+## Tecnologias Utilizadas
+
+O projeto Coffeeroasters utiliza uma combinação de tecnologias front-end e ferramentas de desenvolvimento, incluindo:
+
+- **HTML5 (HyperText Markup Language):** Utilizado para criar a estrutura e o conteúdo semântico do site.
+  
+- **CSS3 (Cascading Style Sheets):** Responsável pela estilização e aparência visual do portfólio, garantindo uma experiência de usuário atraente e responsiva em diferentes dispositivos e navegadores.
+  
+- **JavaScript (ECMAScript 6+):** Adiciona interatividade e funcionalidades dinâmicas ao site, como animações, validação de formulários e manipulação do DOM (Document Object Model).
+  
+- **Ionicons:** Conjunto de ícones vetoriais utilizados para elementos visuais, como botões, links e seções de navegação.
+
+
+
+
+## 4. Instalação
+
+Para utilizar o portfólio de Ramon Dias, siga estas instruções:
+
+1. Clone este repositório: git clone https://github.com/euramondiaz/coffee-plan-create
+
+
+2. Navegue até o diretório do projeto: cd nome do projeto
+
+
+3. Abra o arquivo `index.html` em seu navegador da web para visualizar o projeto.
+
+## 5. Uso
+
+Explore as diferentes seções do portfólio, incluindo "Sobre Mim", "Resumo", "Portfólio" e "Contato". Clique nos links e botões interativos para navegar entre as páginas e seções.
+
+## 6. Contribuição
+
+Se você deseja contribuir com este projeto, siga estas etapas:
+
+1. Faça um fork deste repositório.
+2. Crie uma branch para sua contribuição: `git checkout -b feature/sua-contribuicao`
+3. Faça suas alterações e commit: `git commit -am 'Adicione sua contribuição'`
+4. Faça push para a branch: `git push origin feature/sua-contribuicao`
+5. Abra um pull request.
+
+## 7. Licença
+
+Este projeto está licenciado sob a [Licença MIT](LICENSE), o que significa que você pode usá-lo livremente, modificar e distribuir, incluindo em projetos comerciais. Consulte o arquivo LICENSE para obter mais informações.
+
+Este projeto foi desenvolvido por [RAMON DIAS](https://github.com/euramondiaz).
+ 
+
+
+
+
+
+
